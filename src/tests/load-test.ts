@@ -5,7 +5,6 @@ import {check, sleep} from 'k6';
 export const options = {
     vus: 1, // 1 user looping for 1 minute
     duration: '10s',
-    target: 100,
 
     thresholds: {
         http_req_duration: ['p(69)<1500'], // 69% of requests must complete below 1.5s
