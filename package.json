@@ -8,7 +8,8 @@
     "build": "npm run clean && tsc",
     "prestart": "npm run build",
     "start": "node dist/index.js",
-    "dev": "nodemon ./src/index.ts"
+    "dev": "nodemon ./src/index.ts",
+    "test": "concurrently \"docker pull grafana/k6\" \"docker run --rm -i grafana/k6 run - <./src/tests/load-test.ts\""
   },
   "keywords": [],
   "author": "",
