@@ -1,0 +1,9 @@
+POST http://localhost:3001/input
+Content-Type: application/json
+
+{
+  "number": "10"
+}
+
+###
+GET http://localhost:3001/output?ticket=66
